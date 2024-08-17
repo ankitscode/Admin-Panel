@@ -1,0 +1,3 @@
+[2024-08-13 13:29:38] local.ERROR: syntax error, unexpected token "/" {"view":{"view":"D:\\laravel\\Project\\laravel\\resources\\views\\admin\\users\\admin\\all_admin_list.blade.php","data":{"errors":"<pre class=sf-dump id=sf-dump-86445329 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#471</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+

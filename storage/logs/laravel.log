@@ -1,0 +1,15 @@
+[2024-08-13 08:05:30] local.ERROR: ####### ProductController -> importProducts() #######  Property [name] does not exist on this collection instance.  
+[2024-08-13 08:08:46] local.ERROR: ####### ProductController -> importProducts() #######  SQLSTATE[HY000]: General error: 1364 Field 'productname' doesn't have a default value (Connection: mysql, SQL: insert into `products` (`uniquecode`, `price`, `updated_at`, `created_at`) values (462628, 700, 2024-08-13 08:08:46, 2024-08-13 08:08:46))  
+[2024-08-13 08:08:52] local.ERROR: ####### ProductController -> importProducts() #######  SQLSTATE[HY000]: General error: 1364 Field 'productname' doesn't have a default value (Connection: mysql, SQL: insert into `products` (`uniquecode`, `price`, `updated_at`, `created_at`) values (525737, 700, 2024-08-13 08:08:52, 2024-08-13 08:08:52))  
+[2024-08-13 08:09:42] local.ERROR: ####### ProductController -> importProducts() #######  SQLSTATE[HY000]: General error: 1364 Field 'productname' doesn't have a default value (Connection: mysql, SQL: insert into `products` (`uniquecode`, `price`, `updated_at`, `created_at`) values (424426, 700, 2024-08-13 08:09:42, 2024-08-13 08:09:42))  
+[2024-08-13 08:21:51] local.DEBUG: Processing row: {"name":"T-shirt","price":700}  
+[2024-08-13 08:21:51] local.DEBUG: Validation passed  
+[2024-08-13 08:21:51] local.DEBUG: Product created or updated with unique code: 515110  
+[2024-08-13 08:21:51] local.DEBUG: Processing row: {"name":"shirt","price":500}  
+[2024-08-13 08:21:51] local.DEBUG: Validation passed  
+[2024-08-13 08:21:51] local.DEBUG: Product created or updated with unique code: 512936  
+[2024-08-13 08:21:51] local.DEBUG: Processing row: {"name":"pent","price":900}  
+[2024-08-13 08:21:51] local.DEBUG: Validation passed  
+[2024-08-13 08:21:51] local.DEBUG: Product created or updated with unique code: 513446  
+)
+

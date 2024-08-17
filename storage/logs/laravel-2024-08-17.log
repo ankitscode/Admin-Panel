@@ -1,0 +1,1 @@
+[2024-08-17 12:22:36] local.ERROR: ##### ProductController -> uploadProductImage() #####Method Illuminate\Http\JsonResponse::back does not exist.  
