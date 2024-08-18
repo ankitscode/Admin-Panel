@@ -198,22 +198,23 @@ class ProductController extends Controller
 
     public function uploadProductImage(Request $request, $id)
     {
-        // Validate input
-        $request->validate([
-            'images.*' => 'image|mimes:jpeg,jpg,png,svg|max:2048',
-        ]);
-    
+        Log::info('ProductController -> uploadProductImage() called');
+
         try {
             DB::beginTransaction();
-    
             $product = Product::findOrFail($id);
-    
+
+            Log::info('ProductController -> uploadProductImage() - Product found');
+
             if ($request->hasFile('images')) {
+                Log::info('ProductController -> uploadProductImage() - Images found');
+
                 foreach ($request->file('images') as $image) {
                     $path = config('image.product_image_path_store'); 
                     $mediaId = commencontroller::saveImage($image, $path, 'product', $product->id);
-                    
                     if ($mediaId) {
+                        Log::info('ProductController -> uploadProductImage() - Image uploaded successfully');
+
                         $product->media()->updateOrCreate(
                             ['product_id' => $product->id, 'media_id' => $mediaId]
                         );
@@ -222,6 +223,9 @@ class ProductController extends Controller
             }
     
             DB::commit();
+
+            Log::info('ProductController -> uploadProductImage() - Transaction committed');
+
     
             return response()->json([
                 'success' => true,
@@ -233,7 +237,9 @@ class ProductController extends Controller
             return response()->json(['errors' => $e->errors()], 422);
         } catch (\Exception $e) {
             DB::rollBack();
+
             Log::error('Error in uploadProductImage: ' . $e->getMessage());
+
             return response()->json(['error' => 'Something went wrong.'], 500);
         }
     }

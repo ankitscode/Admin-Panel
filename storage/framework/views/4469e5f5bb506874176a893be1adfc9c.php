@@ -184,15 +184,19 @@ unset($__errorArgs, $__bag); ?>" name="category_id"
     <script>
         Dropzone.options.myDropzone = {
             paramName: "images[]", // The name that will be used to transfer the files
-            maxFilesize: 2, // MB
+            maxFilesize: 5, // MB
             uploadMultiple: true,
             addRemoveLinks: true,
             maxFiles: 5,
-            acceptedFiles: ".jpeg,.jpg,.png,.svg",
+            acceptedFiles: 'image/jpeg, image/jpg, image/png, image/svg+xml',
             success: function(file, response) {
+                console.log(file);
+                console.log(response);  
                 console.log("File uploaded successfully.");
             },
             error: function(file, response) {
+                console.log(file);
+                console.log(response);        
                 console.log("Error uploading file.");
             }
         };
